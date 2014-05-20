@@ -16,7 +16,7 @@ Just use
 	
 To see the result. 	
 
-# Eclipse Intgration
+# Eclipse Integration
 
 Please follow the steps below
 
