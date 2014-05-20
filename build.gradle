@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = "idv.popcorny.WordCount"
+
+repositories {
+    mavenCentral();
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+}
+
+dependencies {
+    compile 'org.apache.hadoop:hadoop-client:2.3.0'
+}
