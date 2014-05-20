@@ -37,7 +37,7 @@ I assume that your have knowledge to set up the hadoop standalone server or clus
 	
 2. Run in hadoop
 
-	hadoop jar build/libs/wordcount.jar <path-to-input> <path-to-output>
+	hadoop jar build/libs/wordcount.jar [path-to-input] [path-to-output]
 
 Good luck and happy MapReduce!!!
 	
