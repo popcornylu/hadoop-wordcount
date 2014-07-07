@@ -41,6 +41,7 @@ I assume that your have knowledge to set up the hadoop standalone server or clus
 
 Good luck and happy MapReduce!!!
 	
-# Azure HDInsigh Support (Thank @MonsterSupreme)
-To make this example more-Hadoop-like, and make it run more smoothly under HDInsight, I add a new task 'hadoop', and define an argument named 'args' to pass all the required parameters.
+# Azure HDInsigh Support 
+
+To make this example more-Hadoop-like, and make it run more smoothly under HDInsight, I add a new task 'hadoop', and define an argument named 'args' to pass all the required parameters. ( Thank @MonsterSupreme )
 
