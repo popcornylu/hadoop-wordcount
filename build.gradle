@@ -17,3 +17,27 @@ jar {
 dependencies {
     compile 'org.apache.hadoop:hadoop-client:2.3.0'
 }
+
+task hadoop(dependsOn: jar, type: Exec) {
+    if (System.properties['os.name'].toLowerCase().contains('windows')) {
+        project.ext.HADOOP_HOME = "$System.env.HADOOP_HOME".replaceAll('\\\\', '/')
+        project.ext.HADOOP_CMD = HADOOP_HOME + '/bin/hadoop.cmd'
+        commandLine 'cmd', '/c', HADOOP_CMD, 'jar', "$jar.archivePath"
+    } 
+    else {
+        project.ext.HADOOP_HOME = "/usr/lib/hadoop"
+        project.ext.HADOOP_CMD = HADOOP_HOME + '/bin/hadoop'
+        commandLine HADOOP_CMD, 'jar', "$jar.archivePath"
+    }
+
+    if (project.hasProperty('args')) {
+        args project.args.split('\\s+')
+        args.each { commandLine.push(it) }      
+    }
+
+    standardOutput = new ByteArrayOutputStream()
+    
+    project.ext.output = {
+        return standardOutput.toString()
+    }
+    }
