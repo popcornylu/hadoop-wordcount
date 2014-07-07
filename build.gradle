@@ -40,4 +40,4 @@ task hadoop(dependsOn: jar, type: Exec) {
     project.ext.output = {
         return standardOutput.toString()
     }
-    }
+}
