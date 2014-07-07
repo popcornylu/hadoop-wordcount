@@ -2,4 +2,4 @@ hello world
 hello hadoop
 hello eclipse
 hello popcorny
-say hello to the hadoop word
+say hello to the hadoop world

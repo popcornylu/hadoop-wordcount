@@ -37,13 +37,10 @@ I assume that your have knowledge to set up the hadoop standalone server or clus
 	
 2. Run in hadoop
 
-	hadoop jar build/libs/wordcount.jar [path-to-input] [path-to-output]
+	hadoop jar build/libs/wordcount.jar <path-to-input> <path-to-output>
 
 Good luck and happy MapReduce!!!
 	
-# Supplement
-
-Thanks popcorny for this great example!
-
+# Azure HDInsigh Support (Thank @MonsterSupreme)
 To make this example more-Hadoop-like, and make it run more smoothly under HDInsight, I add a new task 'hadoop', and define an argument named 'args' to pass all the required parameters.
 
